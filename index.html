@@ -3,7 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Secret Key Matcher</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <section class="container-part" id="pin-random-generator">
+        <div class="generate-pin">
+          <button id="generate-pin-button" type="button">
+            Generate Secret Key
+          </button>
+        </div>
+        <div class="secret-key-show">
+          <h3 id="show-random-secret-key">12345</h3>
+        </div>
+      </section>
+
+      <section class="container-part">
+        <div class="show-enter-pin">
+          <h5>ENTER PIN:</h5>
+          <input type="text" name="pin" id="show-entered-pin" />
+        </div>
+        <div class="keypad">
+          <button class="number-type" type="button">1</button>
+          <button class="number-type" type="button">2</button>
+          <button class="number-type" type="button">3</button>
+          <button class="number-type" type="button">4</button>
+          <button class="number-type" type="button">5</button>
+          <button class="number-type" type="button">6</button>
+          <button class="number-type" type="button">7</button>
+          <button class="number-type" type="button">8</button>
+          <button class="number-type" type="button">9</button>
+          <button class="number-type" type="button">0</button>
+          <button class="delete-type" type="button">X</button>
+          <button class="submit-type" type="button">SUBMIT</button>
+          <button class="clear-type" type="button">CLEAR</button>
+        </div>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
