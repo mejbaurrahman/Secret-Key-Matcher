@@ -10,21 +10,25 @@
     <div class="container">
       <section class="container-part" id="pin-random-generator">
         <div class="generate-pin">
-          <button id="generate-pin-button" type="button">
+          <button
+            onclick="generatePin()"
+            id="generate-pin-button"
+            type="button"
+          >
             Generate Secret Key
           </button>
         </div>
         <div class="secret-key-show">
-          <h3 id="show-random-secret-key">12345</h3>
+          <input id="show-random-secret-key" class="form-control" type="text" />
         </div>
       </section>
-
+      <div class="vl"></div>
       <section class="container-part">
         <div class="show-enter-pin">
           <h5>ENTER PIN:</h5>
-          <input type="text" name="pin" id="show-entered-pin" />
+          <input type="text" name="pin" id="typed-numbers" />
         </div>
-        <div class="keypad">
+        <div id="key-pad" class="keypad">
           <button class="number-type" type="button">1</button>
           <button class="number-type" type="button">2</button>
           <button class="number-type" type="button">3</button>
@@ -36,8 +40,18 @@
           <button class="number-type" type="button">9</button>
           <button class="number-type" type="button">0</button>
           <button class="delete-type" type="button">X</button>
-          <button class="submit-type" type="button">SUBMIT</button>
+          <button onclick="verifyPin()" class="submit-type" type="button">
+            SUBMIT
+          </button>
           <button class="clear-type" type="button">CLEAR</button>
+        </div>
+        <div class="notify-section">
+          <p id="notify-fail" class="notify">
+            ❌ Pin Didn't Match, Please try again
+          </p>
+          <p id="notify-success" class="notify">
+            ✅ Pin Matched... Secret door is opening for you
+          </p>
         </div>
       </section>
     </div>
