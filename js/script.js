@@ -28,8 +28,10 @@ document.getElementById("key-pad").addEventListener("click", function (event) {
 function setInput(input) {
   const typedField = document.getElementById("typed-numbers");
   const typedInput = typedField.value;
-  let typedNumber = typedField.value + input;
-  typedField.value = typedNumber;
+  if (typedInput.length < 6) {
+    let typedNumber = typedField.value + input;
+    typedField.value = typedNumber;
+  }
 }
 
 function verifyPin() {
